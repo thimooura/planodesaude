@@ -9,10 +9,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequiredArgsConstructor
 @Log4j2
-@RequestMapping("/beneficiario")
 public class BeneficiarioController implements BeneficiarioAPI {
-    @Override
-    public beneficiarioCadastradoResponse cadastraBeneficiario(NovoBeneficiarioRequest novoBeneficiario) {
-        return null;
+                @Override
+    public BeneficiarioCadastradoResponse cadastraBeneficiario(NovoBeneficiarioRequest novoBeneficiario) {
+                    log.info("[inicia] beneficiarioController - postBeneficiario");
+                    log.info("[finaliza] beneficiarioController - postBeneficiario");
+                    return null;
     }
+
+
 }

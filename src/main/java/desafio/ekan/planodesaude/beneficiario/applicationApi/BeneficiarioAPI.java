@@ -6,7 +6,8 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/v1/beneficiario")
 public interface BeneficiarioAPI {
+
     @PostMapping
     @ResponseStatus(code = HttpStatus.CREATED)
-     beneficiarioCadastradoResponse cadastraBeneficiario(@RequestBody NovoBeneficiarioRequest novoBeneficiario);
+     BeneficiarioCadastradoResponse cadastraBeneficiario(@RequestBody NovoBeneficiarioRequest novoBeneficiario);
 }
