@@ -25,7 +25,6 @@ public class Beneficiario {
     private String nome;
     @NotBlank
     private String telefone;
-    @NotNull
     private LocalDate dataNascimento;
     private LocalDateTime dataInclusao;
     private LocalDateTime dataAtualizacao;
