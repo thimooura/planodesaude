@@ -1,4 +1,4 @@
-package desafio.ekan.planodesaude.beneficiario.applicationApi;
+package desafio.ekan.planodesaude.beneficiario.application.API;
 
 import lombok.Value;
 

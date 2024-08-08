@@ -1,4 +1,4 @@
-package desafio.ekan.planodesaude.beneficiario.applicationApi;
+package desafio.ekan.planodesaude.beneficiario.application.API;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -9,5 +9,5 @@ public interface BeneficiarioAPI {
 
     @PostMapping
     @ResponseStatus(code = HttpStatus.CREATED)
-     BeneficiarioCadastradoResponse cadastraBeneficiario(@RequestBody NovoBeneficiarioRequest novoBeneficiario);
+    BeneficiarioCadastradoResponse cadastraBeneficiario(@RequestBody NovoBeneficiarioRequest novoBeneficiario);
 }
