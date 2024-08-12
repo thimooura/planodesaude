@@ -2,6 +2,7 @@ package desafio.ekan.planodesaude.beneficiario.application.API;
 
 
 import desafio.ekan.planodesaude.beneficiario.application.service.BeneficiarioService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.web.bind.annotation.RestController;
@@ -47,5 +48,13 @@ public class BeneficiarioController implements BeneficiarioAPI {
         log.info("[inicia] BeneficiarioController - deletaBeneficiarioAtravesId");
         log.info("[idBeneficiario] {}", idBeneficiario);
         log.info("[finaliza] BeneficiarioController - deletaBeneficiarioAtravesId");
+    }
+
+    @Override
+    public void patchAlteraBeneficiario(UUID idBeneficiario, @Valid BeneficiarioAlteracaoRequest beneficiarioAlteracaoRequest) {
+        log.info("[inicia] BeneficiarioController - patchAlteraBeneficiario");
+        log.info("[idBeneficiario] {}", idBeneficiario);
+        log.info("[finaliza] BeneficiarioController - patchAlteraBeneficiario");
+
     }
 }
