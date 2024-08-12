@@ -10,8 +10,8 @@ import java.util.UUID;
 
 public interface BeneficiarioService {
     BeneficiarioCadastradoResponse criaBeneficiario(NovoBeneficiarioRequest novoBeneficiarioRequest);
-
     List<BeneficiarioListCadastradoResponse> buscaTodosBeneficiarios();
-
     BeneficiarioDetalhadoResponse buscaBeneficiarioAtravesId(UUID idBeneficiario);
+    void deletaBeneficiarioAtravesId(UUID idBeneficiario);
+
 }

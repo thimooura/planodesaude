@@ -44,4 +44,9 @@ public class BeneficiarioApplicationService implements BeneficiarioService {
 
         return new BeneficiarioDetalhadoResponse(beneficiario);
     }
+
+    @Override
+    public void deletaBeneficiarioAtravesId(UUID idBeneficiario) {
+        
+    }
 }
