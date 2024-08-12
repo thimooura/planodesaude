@@ -8,5 +8,4 @@ import java.util.Optional;
 import java.util.UUID;
 
 public interface BeneficiarioSpringDataJPARepository extends JpaRepository<Beneficiario, UUID> {
-    Optional<Beneficiario> findById(UUID IdBeneficiario);
 }
