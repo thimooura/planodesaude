@@ -8,9 +8,8 @@ import java.util.UUID;
 
 public interface BeneficiarioRepository {
     Beneficiario salva(Beneficiario beneficiario);
-
     List<Beneficiario> buscaTodosBeneficiarios();
-
     Beneficiario buscaBeneficiarioAtravesId(UUID idBeneficiario);
+    void deletaBeneficiario(Beneficiario beneficiario);
 
 }

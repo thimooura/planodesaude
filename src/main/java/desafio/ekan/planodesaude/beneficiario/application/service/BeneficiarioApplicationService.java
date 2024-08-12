@@ -47,6 +47,6 @@ public class BeneficiarioApplicationService implements BeneficiarioService {
 
     @Override
     public void deletaBeneficiarioAtravesId(UUID idBeneficiario) {
-        
+
     }
 }
