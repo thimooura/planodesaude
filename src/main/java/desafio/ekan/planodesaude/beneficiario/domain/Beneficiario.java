@@ -1,6 +1,7 @@
 package desafio.ekan.planodesaude.beneficiario.domain;
 
 
+import desafio.ekan.planodesaude.beneficiario.application.API.BeneficiarioAlteracaoRequest;
 import desafio.ekan.planodesaude.beneficiario.application.API.NovoBeneficiarioRequest;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
@@ -36,5 +37,12 @@ public class Beneficiario {
         this.telefone = novoBeneficiarioRequest.getTelefone();
         this.dataNascimento = novoBeneficiarioRequest.getDataNascimento();
         this.dataInclusao = LocalDateTime.now();
+    }
+
+    public void altera(BeneficiarioAlteracaoRequest beneficiarioAlteracaoRequest) {
+        this.nome = beneficiarioAlteracaoRequest.getNome();
+        this.telefone = beneficiarioAlteracaoRequest.getTelefone();
+        this.dataNascimento = beneficiarioAlteracaoRequest.getDataNascimento();
+        this.dataAtualizacao = LocalDateTime.now();
     }
 }

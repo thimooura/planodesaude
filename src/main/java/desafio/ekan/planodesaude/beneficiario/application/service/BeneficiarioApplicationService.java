@@ -1,9 +1,6 @@
 package desafio.ekan.planodesaude.beneficiario.application.service;
 
-import desafio.ekan.planodesaude.beneficiario.application.API.BeneficiarioCadastradoResponse;
-import desafio.ekan.planodesaude.beneficiario.application.API.BeneficiarioDetalhadoResponse;
-import desafio.ekan.planodesaude.beneficiario.application.API.BeneficiarioListCadastradoResponse;
-import desafio.ekan.planodesaude.beneficiario.application.API.NovoBeneficiarioRequest;
+import desafio.ekan.planodesaude.beneficiario.application.API.*;
 import desafio.ekan.planodesaude.beneficiario.application.repository.BeneficiarioRepository;
 import desafio.ekan.planodesaude.beneficiario.domain.Beneficiario;
 import lombok.RequiredArgsConstructor;
@@ -47,6 +44,21 @@ public class BeneficiarioApplicationService implements BeneficiarioService {
 
     @Override
     public void deletaBeneficiarioAtravesId(UUID idBeneficiario) {
+        log.info("[inicia] BeneficiarioApplicationService - deletaBeneficiarioAtravesId");
+        Beneficiario beneficiario = beneficiarioRepository.buscaBeneficiarioAtravesId(idBeneficiario);
+        beneficiarioRepository.deletaBeneficiario(beneficiario);
+        log.info("[finaliza] BeneficiarioApplicationService - deletaBeneficiarioAtravesId");
+
+
+    }
+
+    @Override
+    public void patchAlteraBeneficiario(UUID idBeneficiario, BeneficiarioAlteracaoRequest beneficiarioAlteracaoRequest) {
+        log.info("[inicia] BeneficiarioApplicationService - patchAlteraBeneficiario");
+        Beneficiario beneficiario = beneficiarioRepository.buscaBeneficiarioAtravesId(idBeneficiario);
+        beneficiario.altera(beneficiarioAlteracaoRequest);
+        beneficiarioRepository.salva(beneficiario);
+        log.info("[finaliza] BeneficiarioApplicationService - patchAlteraBeneficiario");
 
     }
 }
