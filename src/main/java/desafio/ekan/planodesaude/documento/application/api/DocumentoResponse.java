@@ -1,4 +1,4 @@
-package desafio.ekan.planodesaude.documento.application;
+package desafio.ekan.planodesaude.documento.application.api;
 
 import lombok.Builder;
 import lombok.Value;
